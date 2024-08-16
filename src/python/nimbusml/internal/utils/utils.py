@@ -336,7 +336,7 @@ def get_dprep_path():
     try:
         from azureml.dataprep.api.engineapi.engine import _get_engine_path
         return os.path.dirname(_get_engine_path())
-    except ImportError:
+    except Exception:
         pass
     return ''
 
